@@ -1,34 +1,3 @@
-  // const sendEmails = async () => {
-  //   if (!emails.length || !template) {
-  //     alert('Please upload emails and select a template');
-  //     return;
-  //   }
-
-  //   setSending(true);
-  //   try {
-  //     const formData = new FormData();
-  //     formData.append('emails', JSON.stringify(emails));
-  //     formData.append('template', JSON.stringify(template));
-  //     if (attachment) {
-  //       formData.append('attachment', attachment, attachment.name);
-  //     }
-
-  //     const response = await axios.post('https://sudibackend.vercel.app/api/send-emails', formData, {
-  //       headers: {
-  //         'Content-Type': 'multipart/form-data'
-  //       }
-  //     });
-  //     setResult(response.data);
-  //     alert(`Emails sent successfully to ${response.data.sentCount} recipients`);
-  //   } catch (error) {
-  //     console.error('Error sending emails:', error);
-  //     alert('Failed to send emails. Please try again.');
-  //   } finally {
-  //     setSending(false);
-  //   }
-  // };
-// API KEY = e497d27a6dfe0bbb3ef473087da96795-91fbbdba-a2d23d3c
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
@@ -48,9 +17,16 @@ function EmailSender({ emails, template, attachment }) {
   
     setSending(true);
     try {
+      const user = auth.currentUser;
+      if (!user) {
+        throw new Error('No user is currently logged in');
+      }
+  
       const formData = new FormData();
       formData.append('emails', JSON.stringify(emails));
       formData.append('template', JSON.stringify(template));
+      formData.append('senderName', user.displayName || 'Anonymous');
+      formData.append('senderEmail', user.email);
       if (attachment) {
         formData.append('attachment', attachment);
       }
