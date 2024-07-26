@@ -1,0 +1,97 @@
+.App {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  h1, h2 {
+    color: #c95d5d;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #ff5757;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #ff5757e6;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+  }
+  
+  li {
+    padding: 5px 0;
+
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .errormsg {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    margin-top: -6%;
+    margin-left: 40%;
+  }
+  
+  .customTemplate, .Emaillist {
+    color: #ffffff;
+  }
+  
+  .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Emaillist h2, .customTemplate h2 {
+    text-align: center;
+  }
+  
+  .Emaillist p {
+    text-align: center;
+  }
+  .Templateselector,.EmailSender{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,50 @@
+.about-us {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-us h1 {
+    color: #acacac;
+    border-bottom: 2px solid #ff5757;
+    padding-bottom: 10px;
+}
+
+.team-member {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.team-member h3,.team-member p {
+    color: #000000;
+}
+
+.mission {
+    font-style: italic;
+    color: #7f8c8d;
+    border-left: 3px solid #ff5757;
+    padding-left: 15px;
+}
+
+.about-us ul {
+    list-style-type: none;  /* Remove default bullets */
+    padding-left: 0;
+  }
+  
+  .about-us li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .about-us li::before {
+    content: "•";  /* You can use any character or even an image here */
+    position: absolute;
+    left: 0;
+    color: #ff5757;  /* Color of the bullet point */
+  }

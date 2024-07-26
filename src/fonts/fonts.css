@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Cooper BT';
+    src: url('/fonts/CooperBT-Medium.woff2') format('woff2'),
+         url('/fonts/CooperBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cooper BT';
+    src: url('/fonts/CooperBT-Bold.woff2') format('woff2'),
+         url('/fonts/CooperBT-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* Add more @font-face rules for other weights/styles if needed */
